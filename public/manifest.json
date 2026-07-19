@@ -7,22 +7,22 @@
   "display": "standalone",
   "display_override": ["window-controls-overlay", "standalone"],
   "background_color": "#09090B",
-  "theme_color": "#6D5DF6",
+  "theme_color": "#7C3AED",
   "orientation": "any",
   "lang": "en-US",
   "categories": ["productivity", "business", "utilities"],
   "icons": [
     {
-      "src": "/app-logo.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
-      "purpose": "any maskable"
-    },
-    {
       "src": "/favicon.svg",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any"
+    },
+    {
+      "src": "/app-logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
     }
   ],
   "shortcuts": [
@@ -30,19 +30,22 @@
       "name": "Dashboard",
       "short_name": "Dashboard",
       "url": "/dashboard",
-      "description": "View your analytics dashboard"
+      "description": "View your analytics dashboard",
+      "icons": [{ "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }]
     },
     {
       "name": "Add Reviews",
       "short_name": "Add Reviews",
       "url": "/input",
-      "description": "Paste or upload customer feedback"
+      "description": "Paste or upload customer feedback",
+      "icons": [{ "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }]
     },
     {
       "name": "Export Report",
       "short_name": "Export",
       "url": "/export",
-      "description": "Export analysis as PDF or CSV"
+      "description": "Export analysis as PDF or CSV",
+      "icons": [{ "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }]
     }
   ]
 }

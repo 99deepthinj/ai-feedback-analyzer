@@ -14,10 +14,10 @@ import {
   HelpCircle,
   Info,
   ChevronRight,
-  Zap,
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { useAnalysis } from '@/hooks/useAnalysis'
+import AppIcon from '@/components/ui/AppIcon'
 
 const navItems = [
   { to: '/dashboard', label: 'Dashboard', icon: LayoutDashboard, group: 'main' },
@@ -79,14 +79,7 @@ export function Sidebar({ isOpen }: SidebarProps) {
       >
         <div className="flex items-center gap-2.5 overflow-hidden">
           {/* Brand mark */}
-          <div
-            className="flex h-8 w-8 shrink-0 items-center justify-center rounded-xl glow-sm"
-            style={{
-              background: 'linear-gradient(135deg, #6D5DF6 0%, #8B5CF6 100%)',
-            }}
-          >
-            <Zap className="h-4 w-4 text-white" aria-hidden="true" />
-          </div>
+          <AppIcon size={32} animate={true} />
 
           <AnimatePresence>
             {isOpen && (
@@ -256,7 +249,7 @@ export function Sidebar({ isOpen }: SidebarProps) {
                 <span className="text-[11px] font-medium" style={{ color: '#6D5DF6' }}>
                   Reviews Analyzed
                 </span>
-                <Zap className="h-3 w-3" style={{ color: '#6D5DF6' }} aria-hidden="true" />
+                <AppIcon size={12} animate={false} />
               </div>
               <p className="text-xl font-bold text-white tabular-nums">
                 {reviews.length.toLocaleString()}

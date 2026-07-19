@@ -1,44 +1,91 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="AI Feedback Analyzer">
   <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#7c3aed"/>
-      <stop offset="100%" stop-color="#8b5cf6"/>
+    <linearGradient id="bg-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6D28D9"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
     </linearGradient>
-    <linearGradient id="shine" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="rgba(255,255,255,0.15)"/>
-      <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+    <linearGradient id="shine-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.13"/>
+      <stop offset="60%" stop-color="#ffffff" stop-opacity="0"/>
     </linearGradient>
+    <linearGradient id="line-grad" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#A78BFA"/>
+      <stop offset="100%" stop-color="#C4B5FD"/>
+    </linearGradient>
+    <linearGradient id="node-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#C4B5FD"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="node-glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="icon-clip">
+      <rect width="512" height="512" rx="112" ry="112"/>
+    </clipPath>
   </defs>
 
-  <!-- Background circle -->
-  <circle cx="256" cy="256" r="240" fill="url(#bg)"/>
-  <!-- Shine overlay -->
-  <circle cx="256" cy="256" r="240" fill="url(#shine)"/>
+  <!-- Background rounded square -->
+  <rect width="512" height="512" rx="112" ry="112" fill="url(#bg-grad)"/>
+  <!-- Subtle top-shine -->
+  <rect width="512" height="512" rx="112" ry="112" fill="url(#shine-grad)"/>
 
-  <!-- Circuit-board accent lines -->
-  <g stroke="rgba(255,255,255,0.12)" stroke-width="2" fill="none">
-    <line x1="120" y1="180" x2="160" y2="180"/>
-    <line x1="160" y1="180" x2="160" y2="140"/>
-    <line x1="352" y1="332" x2="392" y2="332"/>
-    <line x1="392" y1="332" x2="392" y2="372"/>
-    <line x1="120" y1="332" x2="160" y2="332"/>
-    <line x1="160" y1="332" x2="160" y2="372"/>
-    <line x1="352" y1="180" x2="392" y2="180"/>
-    <line x1="392" y1="180" x2="392" y2="140"/>
-    <circle cx="160" cy="140" r="4" fill="rgba(255,255,255,0.2)" stroke="none"/>
-    <circle cx="160" cy="372" r="4" fill="rgba(255,255,255,0.2)" stroke="none"/>
-    <circle cx="392" cy="140" r="4" fill="rgba(255,255,255,0.2)" stroke="none"/>
-    <circle cx="392" cy="372" r="4" fill="rgba(255,255,255,0.2)" stroke="none"/>
+  <!-- Very subtle grid texture -->
+  <g clip-path="url(#icon-clip)" opacity="0.06" stroke="#ffffff" stroke-width="1" fill="none">
+    <line x1="128" y1="0" x2="128" y2="512"/>
+    <line x1="256" y1="0" x2="256" y2="512"/>
+    <line x1="384" y1="0" x2="384" y2="512"/>
+    <line x1="0" y1="128" x2="512" y2="128"/>
+    <line x1="0" y1="256" x2="512" y2="256"/>
+    <line x1="0" y1="384" x2="512" y2="384"/>
   </g>
 
-  <!-- "AF" monogram -->
-  <text
-    x="256" y="300"
-    font-family="system-ui, -apple-system, sans-serif"
-    font-size="160"
-    font-weight="700"
-    fill="white"
-    text-anchor="middle"
-    letter-spacing="-8"
-  >AF</text>
+  <!-- Connector lines between nodes -->
+  <g filter="url(#glow)">
+    <line x1="130" y1="330" x2="210" y2="290" stroke="url(#line-grad)" stroke-width="14" stroke-linecap="round"/>
+    <line x1="210" y1="290" x2="290" y2="240" stroke="url(#line-grad)" stroke-width="14" stroke-linecap="round"/>
+    <line x1="290" y1="240" x2="382" y2="165" stroke="url(#line-grad)" stroke-width="14" stroke-linecap="round"/>
+  </g>
+
+  <!-- Baseline horizontal reference -->
+  <line x1="100" y1="355" x2="412" y2="355" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" opacity="0.18"/>
+  <!-- Vertical drop lines -->
+  <g stroke="#A78BFA" stroke-width="2" stroke-dasharray="6 5" opacity="0.3">
+    <line x1="130" y1="330" x2="130" y2="355"/>
+    <line x1="210" y1="290" x2="210" y2="355"/>
+    <line x1="290" y1="240" x2="290" y2="355"/>
+    <line x1="382" y1="165" x2="382" y2="355"/>
+  </g>
+
+  <!-- Data nodes -->
+  <g filter="url(#node-glow)">
+    <circle cx="130" cy="330" r="18" fill="url(#node-grad)" opacity="0.9"/>
+    <circle cx="130" cy="330" r="10" fill="#ffffff" opacity="0.95"/>
+    <circle cx="210" cy="290" r="20" fill="url(#node-grad)" opacity="0.92"/>
+    <circle cx="210" cy="290" r="11" fill="#ffffff" opacity="0.95"/>
+    <circle cx="290" cy="240" r="22" fill="url(#node-grad)" opacity="0.94"/>
+    <circle cx="290" cy="240" r="12" fill="#ffffff" opacity="0.95"/>
+    <circle cx="382" cy="165" r="28" fill="#C4B5FD" opacity="0.95"/>
+    <circle cx="382" cy="165" r="16" fill="#ffffff" opacity="1"/>
+  </g>
+
+  <!-- 4-point star sparkle at apex node -->
+  <g fill="#7C3AED" opacity="0.85">
+    <polygon points="382,138 387,158 382,165 377,158"/>
+    <polygon points="382,192 387,172 382,165 377,172"/>
+    <polygon points="355,165 375,160 382,165 375,170"/>
+    <polygon points="409,165 389,160 382,165 389,170"/>
+  </g>
+
+  <!-- Small accent sparkles -->
+  <g transform="translate(420, 120)" fill="#C4B5FD" opacity="0.7">
+    <polygon points="0,-9 2,-2 9,0 2,2 0,9 -2,2 -9,0 -2,-2"/>
+  </g>
+  <g transform="translate(100, 200)" fill="#A78BFA" opacity="0.45">
+    <polygon points="0,-6 1.5,-1.5 6,0 1.5,1.5 0,6 -1.5,1.5 -6,0 -1.5,-1.5"/>
+  </g>
 </svg>

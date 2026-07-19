@@ -7,6 +7,7 @@ import {
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
+import AppIcon from '@/components/ui/AppIcon'
 
 const features = [
   {
@@ -47,7 +48,7 @@ const features = [
   {
     icon: Download,
     color: '#06B6D4',
-    bg: 'rgba(6,182,212,0.1)',
+    bg: 'rgba(139,92,246,0.1)',
     title: 'Export Reports',
     description: 'One-click PDF, CSV, or JSON export. Save to PDF directly from the print dialog.',
   },
@@ -113,7 +114,7 @@ export default function Landing() {
         />
         <div
           className="absolute bottom-0 left-1/3 h-[400px] w-[400px] rounded-full opacity-10 blur-[100px]"
-          style={{ background: 'radial-gradient(circle, #7C6CFF, transparent 70%)' }}
+          style={{ background: 'radial-gradient(circle, #6D5DF6, transparent 70%)' }}
         />
       </div>
 
@@ -127,12 +128,7 @@ export default function Landing() {
         }}
       >
         <div className="flex items-center gap-2.5">
-          <div
-            className="flex h-8 w-8 items-center justify-center rounded-xl"
-            style={{ background: 'linear-gradient(135deg, #6D5DF6, #8B5CF6)' }}
-          >
-            <Zap className="h-4 w-4 text-white" aria-hidden="true" />
-          </div>
+          <AppIcon size={32} animate={true} />
           <span className="text-[13px] font-semibold text-white">AI Feedback Analyzer</span>
         </div>
 
@@ -179,7 +175,7 @@ export default function Landing() {
                 color: '#A78BFA',
               }}
             >
-              <Zap className="h-3 w-3 mr-1 inline" aria-hidden="true" />
+              <span className="inline-block align-middle mr-1"><AppIcon size={12} animate={false} /></span>
               AI-Powered · Zero API Keys · Fully Client-Side
             </Badge>
           </motion.div>
@@ -193,7 +189,7 @@ export default function Landing() {
             <span
               className="gradient-text"
               style={{
-                background: 'linear-gradient(135deg, #A78BFA 0%, #7C6CFF 50%, #6D5DF6 100%)',
+                background: 'linear-gradient(135deg, #A78BFA 0%, #6D5DF6 50%, #6D5DF6 100%)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
               }}
@@ -647,12 +643,7 @@ export default function Landing() {
       >
         <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
-            <div
-              className="flex h-6 w-6 items-center justify-center rounded-lg"
-              style={{ background: 'linear-gradient(135deg, #6D5DF6, #8B5CF6)' }}
-            >
-              <Zap className="h-3.5 w-3.5 text-white" aria-hidden="true" />
-            </div>
+            <AppIcon size={22} animate={false} />
             <span className="text-xs font-medium" style={{ color: '#52525B' }}>
               AI Feedback Analyzer · MIT License
             </span>
