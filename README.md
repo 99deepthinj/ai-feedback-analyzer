@@ -1,51 +1,68 @@
+<div align="center">
+
 # AI Feedback Analyzer
 
-[![MIT License](https://img.shields.io/badge/license-MIT-8b5cf6.svg)](LICENSE)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6.svg)](https://www.typescriptlang.org/)
-[![React](https://img.shields.io/badge/React-19-61dafb.svg)](https://react.dev/)
-[![Vite](https://img.shields.io/badge/Vite-8-646cff.svg)](https://vitejs.dev/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind-v4-06b6d4.svg)](https://tailwindcss.com/)
+**Turn raw customer reviews into prioritized product insights — in seconds, with zero API keys.**
 
-**Turn raw customer reviews into prioritized product insights in seconds.**
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-ai--feedback--roan.vercel.app-7C3AED?style=for-the-badge&logo=vercel&logoColor=white)](https://ai-feedback-roan.vercel.app)
+[![GitHub](https://img.shields.io/badge/GitHub-99deepthinj%2Fai--feedback--analyzer-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/99deepthinj/ai-feedback-analyzer)
 
-Paste reviews (or load a branded sample dataset) and get AI-generated sentiment breakdown, theme clusters, pain point rankings, RICE-scored feature recommendations, and an executive summary — all running client-side with zero API keys required.
+[![MIT License](https://img.shields.io/badge/License-MIT-8B5CF6.svg)](LICENSE)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6.svg)](https://www.typescriptlang.org/)
+[![React](https://img.shields.io/badge/React-19-61DAFB.svg)](https://react.dev/)
+[![Vite](https://img.shields.io/badge/Vite-8-646CFF.svg)](https://vitejs.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-v4-06B6D4.svg)](https://tailwindcss.com/)
+
+</div>
+
+---
+
+Paste reviews (or load a branded sample dataset — Zepto, Swiggy, Zomato, Blinkit) and instantly get:
+- **Sentiment breakdown** with trend charts and source attribution
+- **Theme clusters** with word cloud, bubble map, and mention counts
+- **Pain point rankings** with severity, affected-user %, and effort estimate
+- **RICE-scored feature recommendations** and a prioritized product roadmap
+- **AI-generated executive summary** with animated typewriter reveal
+
+Everything runs **entirely client-side** — no backend, no API keys, no data leaves the browser.
 
 ---
 
 ## Screenshots
 
-| Screen | Description |
-|--------|-------------|
-| ![Landing](docs/screenshots/landing.png) | Dark-themed landing page with hero, stats, and feature grid |
-| ![Dashboard](docs/screenshots/dashboard.png) | KPI cards, sentiment trend, NPS gauge, AI executive summary |
-| ![Review Input](docs/screenshots/review-input.png) | Brand dataset picker (Zepto, Swiggy, Zomato, Blinkit), paste + live preview |
-| ![Sentiment Analysis](docs/screenshots/sentiment.png) | Area chart, radar chart, source breakdown, rating distribution |
-| ![Theme Detection](docs/screenshots/themes.png) | Bar chart, word cloud, bubble scatter map, theme detail cards |
-| ![All Reviews](docs/screenshots/reviews.png) | Searchable, filterable, sortable paginated table with CSV export |
-| ![Pain Points](docs/screenshots/pain-points.png) | Severity-ranked cards with affected user counts and effort estimates |
-| ![Product Roadmap](docs/screenshots/roadmap.png) | Kanban, Timeline, and Gantt views with status tracking |
-| ![Export](docs/screenshots/export.png) | PDF (print dialog), real CSV/JSON downloads, section toggles |
+| | |
+|---|---|
+| ![Landing page](docs/images/landing.png) | ![Dashboard with executive summary](docs/images/dashboard.png) |
+| Dark-themed landing with hero, stats, and feature grid | KPI cards, sentiment trend, NPS gauge, AI executive summary |
+| ![Sentiment analysis](docs/images/sentiment.png) | ![Theme detection](docs/images/themes.png) |
+| Area chart, radar chart, source breakdown, rating distribution | Bar chart, word cloud, bubble scatter, theme detail cards |
+| ![Pain points](docs/images/pain-points.png) | ![Product roadmap](docs/images/roadmap.png) |
+| Severity-ranked cards with affected user % and effort estimate | Kanban, Timeline, and Gantt views with status tracking |
+| ![Light theme](docs/images/light-theme.png) | ![Dark theme](docs/images/dark-theme.png) |
+| Light mode — clean, high-contrast, print-friendly | Dark mode — sidebar, charts, full design system |
 
-> _Run `npm run dev` and visit `http://localhost:5173` to see the live app._
+> **[Try it live →](https://ai-feedback-roan.vercel.app)** or run locally with `npm run dev`.
 
 ---
 
 ## Features
 
-- **One-click sample datasets** — Generic SaaS, Zepto ⚡, Swiggy 🛵, Zomato 🍽️, Blinkit 🟡
-- **AI-generated executive summary** — deterministic NLP paragraph with animated reveal and copy-to-clipboard
-- **Sentiment classification** — positive / negative / neutral per review with trend charts
-- **Theme detection** — keyword clustering with mention counts, trend direction, word cloud
-- **Pain point analysis** — severity (critical/high/medium/low), affected user %, effort estimate
-- **Feature recommendations** — AI-generated with RICE scoring (reach × impact × confidence ÷ effort)
-- **Product roadmap** — Kanban, Timeline, and Gantt views with status badges
-- **Searchable review table** — full-text search, multi-filter (sentiment, source, stars, date range), pagination
-- **Real exports** — PDF via `window.print()`, CSV and JSON via Blob download
-- **Dark mode** — persisted in `localStorage`, respects `prefers-color-scheme`
-- **Loading skeletons** — shimmer animation on all analysis pages
-- **Toast notifications** — zero-dependency custom context+reducer implementation
-- **Full accessibility** — ARIA labels, keyboard nav, `role="progressbar"`, `aria-live` regions
-- **Mobile responsive** — sidebar collapses, grids reflow at all breakpoints
+| Category | Feature |
+|----------|---------|
+| **Input** | Paste free-text reviews or load one-click sample datasets (Generic, Zepto ⚡, Swiggy 🛵, Zomato 🍽️, Blinkit 🟡) |
+| **Analysis** | Sentiment classification (positive / negative / neutral) per review |
+| **Analysis** | Theme detection — keyword clustering with mention counts and trend direction |
+| **Analysis** | Pain point identification — severity, affected user %, effort estimate |
+| **Analysis** | Feature recommendations with RICE scoring (Reach × Impact × Confidence ÷ Effort) |
+| **Synthesis** | AI executive summary — deterministic NLP with animated reveal and copy button |
+| **Planning** | Product roadmap in Kanban, Timeline, and Gantt views |
+| **Data** | Searchable, filterable, sortable review table (full-text, sentiment, source, stars, date) |
+| **Export** | PDF via `window.print()`, real CSV and JSON via Blob download |
+| **UX** | Dark mode persisted in `localStorage`, respects `prefers-color-scheme` |
+| **UX** | Loading skeletons on all analysis pages, toast notifications on actions |
+| **UX** | Command palette (⌘K), keyboard shortcuts, mobile-responsive sidebar |
+| **A11y** | ARIA labels, keyboard navigation, `role="progressbar"`, `aria-live` regions |
+| **PWA** | Service worker, `manifest.json`, installable on desktop and mobile |
 
 ---
 
@@ -71,7 +88,7 @@ Paste reviews (or load a branded sample dataset) and get AI-generated sentiment 
 │           │                        └─────────────────────────┘ │
 │           ▼                                                      │
 │  ┌──────────────────────────────────────────────────────────┐   │
-│  │                      Pages (React Router v7)             │   │
+│  │                  Pages (React Router v7)                 │   │
 │  │                                                          │   │
 │  │  /dashboard  /sentiment  /themes  /pain-points           │   │
 │  │  /recommendations  /roadmap  /reviews  /export           │   │
@@ -88,29 +105,33 @@ Paste reviews (or load a branded sample dataset) and get AI-generated sentiment 
 
 | Decision | Rationale |
 |----------|-----------|
-| **Module-singleton state** (`let _state` in `useAnalysis.ts`) | Survives route navigation without Redux/Zustand. One file, zero boilerplate. |
-| **Hardcoded hex colors** in `chartColors.ts` | SVG `fill` attributes cannot resolve CSS custom properties — Recharts renders to SVG. |
-| **`window.print()` for PDF** | Zero new dependencies. Browser renders charts natively at full fidelity. Sidebar/header hidden via `@media print`. |
-| **Custom toast system** | 60-line `useContext`+`useReducer` implementation. No `sonner` or `react-hot-toast` bundle cost. |
-| **Tailwind v4 `@theme {}`** | Plugin-based — no `tailwind.config.ts`. Design tokens live in `index.css`. |
-| **`isAnimationActive={false}`** on all Recharts elements | Prevents incomplete animations in headless rendering and avoids layout thrash on navigation. |
-| **Deterministic executive summary** | Template-based NLP. Same reviews always produce the same summary — no randomness, no API call. |
+| **Module-singleton state** (`let _state` in `useAnalysis.ts`) | Survives route navigation without Redux or Zustand — one file, zero boilerplate |
+| **Hardcoded hex colors** in `chartColors.ts` | SVG `fill` attributes cannot resolve CSS custom properties; Recharts renders to SVG |
+| **`window.print()` for PDF** | Zero new dependencies; browser renders charts natively at full fidelity; sidebar hidden via `@media print` |
+| **Custom toast system** | 60-line `useContext`+`useReducer` implementation — no `sonner` or `react-hot-toast` bundle cost |
+| **Tailwind v4 `@theme {}`** | Plugin-based — no `tailwind.config.ts`; design tokens live directly in `index.css` |
+| **`isAnimationActive={false}`** on Recharts | Prevents incomplete animations in headless rendering and avoids layout thrash on navigation |
+| **Deterministic executive summary** | Template-based NLP — same reviews always produce the same summary; no randomness, no API call |
+| **Code splitting** | `React.lazy()` on 12 secondary pages; Recharts, Framer Motion, Radix in separate chunks; initial load ~84KB |
 
 ---
 
 ## Tech Stack
 
 | Layer | Technology |
-|-------|-----------|
+|-------|------------|
 | Framework | React 19 + TypeScript 5 |
 | Build tool | Vite 8 |
-| Styling | Tailwind CSS v4 (plugin-based, `@theme {}`) |
+| Styling | Tailwind CSS v4 (`@theme {}` plugin-based) |
 | Routing | React Router v7 |
+| Animation | Framer Motion 12 |
 | Charts | Recharts 2 |
 | Icons | Lucide React |
+| UI primitives | Radix UI (Select, Dialog, Accordion, Tabs, etc.) |
 | State | Module singleton (`useAnalysis.ts`) + React Context (toast, dark mode) |
-| Exports | `window.print()` (PDF), `Blob`+`URL.createObjectURL` (CSV/JSON) |
+| Exports | `window.print()` (PDF), `Blob`+`URL.createObjectURL` (CSV / JSON) |
 | NLP | Client-side keyword engine (`analysisEngine.ts`) |
+| PWA | Vite PWA plugin, `manifest.json`, service worker |
 
 ---
 
@@ -118,7 +139,7 @@ Paste reviews (or load a branded sample dataset) and get AI-generated sentiment 
 
 ```bash
 # Clone
-git clone https://github.com/your-username/ai-feedback-analyzer.git
+git clone https://github.com/99deepthinj/ai-feedback-analyzer.git
 cd ai-feedback-analyzer
 
 # Install dependencies
@@ -133,7 +154,7 @@ npx tsc --noEmit
 
 # Production build
 npm run build
-npm run preview  # preview production build locally
+npm run preview   # preview production build locally
 ```
 
 No environment variables are required. See [`.env.example`](.env.example) for future API integration placeholders.
@@ -149,7 +170,7 @@ npm i -g vercel
 vercel
 ```
 
-Or connect your GitHub repo at [vercel.com](https://vercel.com) — Vite is auto-detected.
+Or connect your GitHub repo at [vercel.com](https://vercel.com) — Vite is auto-detected, no config needed.
 
 ### Netlify
 
@@ -188,9 +209,9 @@ docker run -p 8080:80 ai-feedback-analyzer
 
 ## Future Backend Architecture
 
-The current client-side engine uses keyword matching. Replacing it with Claude or OpenAI APIs requires minimal changes — only `analysisEngine.ts` functions need API-backed implementations.
+The current engine uses client-side keyword matching. Replacing it with Claude or OpenAI requires changing only the functions in `analysisEngine.ts`.
 
-### Sentiment Classification → Claude
+### Sentiment Classification → Claude API
 
 ```typescript
 // Current: keyword matching in classifySentiment()
@@ -258,12 +279,11 @@ Top themes: ${reviews.flatMap(r => r.themes).slice(0, 5).join(', ')}`
 | Executive summary | ~$0.005 |
 | **Total** | **~$0.025 / 100 reviews** |
 
-### Recommended Production Architecture
-
+**Recommended production architecture:**
 ```
-Frontend (this repo) → API Server (Node/FastAPI) → Claude API
-                                    ↓
-                          PostgreSQL + Redis cache
+Frontend (this repo) → API Server (Node / FastAPI) → Claude API
+                                   ↓
+                         PostgreSQL + Redis cache
 ```
 
 ---
@@ -274,7 +294,7 @@ Frontend (this repo) → API Server (Node/FastAPI) → Claude API
 - [ ] PostgreSQL storage for review history across sessions
 - [ ] Multi-project workspace (separate analysis runs per product)
 - [ ] Slack / Jira integration to push pain points as tickets
-- [ ] CSV/spreadsheet bulk import with column mapping UI
+- [ ] CSV / spreadsheet bulk import with column mapping UI
 - [ ] Scheduled weekly digest email reports
 - [ ] Shareable read-only report URLs
 - [ ] Competitor comparison view (side-by-side datasets)

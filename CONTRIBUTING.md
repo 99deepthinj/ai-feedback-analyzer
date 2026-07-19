@@ -5,7 +5,7 @@ Thank you for considering a contribution! This document explains how to get star
 ## Development Setup
 
 ```bash
-git clone https://github.com/your-username/ai-feedback-analyzer.git
+git clone https://github.com/99deepthinj/ai-feedback-analyzer.git
 cd ai-feedback-analyzer
 npm install
 npm run dev        # starts Vite dev server at http://localhost:5173

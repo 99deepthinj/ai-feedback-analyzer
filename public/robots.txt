@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ai-feedback-roan.vercel.app/sitemap.xml
