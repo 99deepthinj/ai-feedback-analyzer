@@ -1,0 +1,48 @@
+{
+  "name": "AI Feedback Analyzer",
+  "short_name": "AIFA",
+  "description": "Transform customer reviews into product strategy — AI-powered sentiment analysis, theme detection, pain points, and RICE prioritization. Runs entirely in your browser.",
+  "start_url": "/dashboard",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone"],
+  "background_color": "#09090B",
+  "theme_color": "#6D5DF6",
+  "orientation": "any",
+  "lang": "en-US",
+  "categories": ["productivity", "business", "utilities"],
+  "icons": [
+    {
+      "src": "/app-logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Dashboard",
+      "short_name": "Dashboard",
+      "url": "/dashboard",
+      "description": "View your analytics dashboard"
+    },
+    {
+      "name": "Add Reviews",
+      "short_name": "Add Reviews",
+      "url": "/input",
+      "description": "Paste or upload customer feedback"
+    },
+    {
+      "name": "Export Report",
+      "short_name": "Export",
+      "url": "/export",
+      "description": "Export analysis as PDF or CSV"
+    }
+  ]
+}
